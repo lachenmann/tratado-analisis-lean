@@ -9,3 +9,7 @@ El módulo Foundations/RelationalFunctions.lean construye grafos por Separación
 La auditoría incluye 62 declaraciones nuevas, además de las 972 anteriores. Se amplía el control de importaciones locales a las dos nuevas fuentes. No se modifica ningún archivo Lean previamente certificado; el módulo raíz y la versión de Lake se reservan para la integración.
 
 Estado: candidato pendiente de CI. Todavía no se abre la construcción del cociente ni se utiliza la completitud de Dedekind. El registro canónico de la bóveda sigue pendiente de actualización.
+
+## Cierre de A2
+
+PASS CI #15 (45450730341), commit 8e436cb1e7d1361cfcc7601eb889f86459c9e322. 909 trabajos, 62/62 huellas con propext y Quot.sound, 1034 acumuladas, clausura de 35 módulos independiente de Dedekind. Se fija A2_AXIOMAS.txt para controles posteriores. Sin nuevas dependencias de Choice ni sorryAx.
