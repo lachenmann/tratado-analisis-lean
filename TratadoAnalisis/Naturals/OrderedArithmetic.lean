@@ -238,11 +238,62 @@ theorem compareNatCodes_spec (a b : Nat) :
     (compareNatCodes a b = .eq ↔ a = b) ∧
     (compareNatCodes a b = .gt ↔ b < a) := by
   induction a generalizing b with
-  | zero => cases b <;> simp [compareNatCodes]
+  | zero =>
+      cases b with
+      | zero =>
+          change (Ordering.eq = Ordering.lt ↔ 0 < 0) ∧
+            (Ordering.eq = Ordering.eq ↔ (0 : Nat) = 0) ∧
+            (Ordering.eq = Ordering.gt ↔ 0 < 0)
+          refine ⟨⟨?_, ?_⟩, ⟨fun _ => rfl, fun _ => rfl⟩, ⟨?_, ?_⟩⟩
+          · intro h
+            cases h
+          · intro h
+            exact (Nat.not_lt_zero 0 h).elim
+          · intro h
+            cases h
+          · intro h
+            exact (Nat.not_lt_zero 0 h).elim
+      | succ b =>
+          change (Ordering.lt = Ordering.lt ↔ 0 < b.succ) ∧
+            (Ordering.lt = Ordering.eq ↔ 0 = b.succ) ∧
+            (Ordering.lt = Ordering.gt ↔ b.succ < 0)
+          refine ⟨⟨fun _ => Nat.zero_lt_succ b, fun _ => rfl⟩,
+            ⟨?_, ?_⟩, ⟨?_, ?_⟩⟩
+          · intro h
+            cases h
+          · intro h
+            exact (Nat.succ_ne_zero b h.symm).elim
+          · intro h
+            cases h
+          · intro h
+            exact (Nat.not_lt_zero b.succ h).elim
   | succ a ih =>
       cases b with
-      | zero => simp [compareNatCodes]
-      | succ b => simpa [compareNatCodes] using ih b
+      | zero =>
+          change (Ordering.gt = Ordering.lt ↔ a.succ < 0) ∧
+            (Ordering.gt = Ordering.eq ↔ a.succ = 0) ∧
+            (Ordering.gt = Ordering.gt ↔ 0 < a.succ)
+          refine ⟨⟨?_, ?_⟩, ⟨?_, ?_⟩,
+            ⟨fun _ => Nat.zero_lt_succ a, fun _ => rfl⟩⟩
+          · intro h
+            cases h
+          · intro h
+            exact (Nat.not_lt_zero a.succ h).elim
+          · intro h
+            cases h
+          · intro h
+            exact (Nat.succ_ne_zero a h).elim
+      | succ b =>
+          change (compareNatCodes a b = .lt ↔ a.succ < b.succ) ∧
+            (compareNatCodes a b = .eq ↔ a.succ = b.succ) ∧
+            (compareNatCodes a b = .gt ↔ b.succ < a.succ)
+          have h := ih b
+          exact ⟨⟨fun e => Nat.succ_lt_succ (h.1.mp e),
+              fun e => h.1.mpr (Nat.lt_of_succ_lt_succ e)⟩,
+            ⟨fun e => congrArg Nat.succ (h.2.1.mp e),
+              fun e => h.2.1.mpr (Nat.succ.inj e)⟩,
+            ⟨fun e => Nat.succ_lt_succ (h.2.2.mp e),
+              fun e => h.2.2.mpr (Nat.lt_of_succ_lt_succ e)⟩⟩
 
 /-- TA-PRO-00170: el algoritmo de códigos clasifica exactamente el orden
     de los naturales conjuntistas codificados. No extrae códigos de ZFSet. -/
