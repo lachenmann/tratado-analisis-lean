@@ -1,0 +1,24 @@
+import TratadoAnalisis.Abstract.AbsoluteValue
+
+/-! P02 — auditoría separada de valor absoluto y desigualdad triangular. -/
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.IsAbsoluteValue
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.opposite_unique
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.zero_opposite
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.absolute_mem
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.absolute_upper_iff
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.absolute_unique
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.TA_DEF_00071_absolute_exists_unique
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.absolute_of_nonnegative
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.absolute_of_nonpositive
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.absolute_nonnegative
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.absolute_bounds
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.absolute_zero_iff
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.absolute_opposite
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.absolute_le_iff
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.add_commutes
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.mul_commutes
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.mul_value_unique
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.absolute_mul
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.add_opposites
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.add_pair_le
+#print axioms TratadoAnalisis.AbstractCompleteness.AbsoluteValue.TA_THM_00035_triangle

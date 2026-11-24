@@ -17,3 +17,7 @@ Los enunciados se cotejaron con capítulo 1 v1.5.0 (§§1.5–1.6 y §1.2.2 bis)
 Se preservan las 833 consultas históricas y las 25 de API. Se añade una sonda separada de 22 consultas, incluyendo tres auxiliares ya existentes. El nuevo manifiesto de versión y la integración de la API de v0.1.2 se reservan para el cierre del bloque completo. No se altera el manuscrito, la versión de Lake, ni las etiquetas previas.
 
 Pendientes de P02: TA-THM-00035 (incluidos prerrequisitos de valor absoluto), TA-THM-00038, TA-THM-00039 y cotejo de TA-PRO-00069. TA-COR-00139 y TA-PRO-00427 siguen como pendientes explícitos; no se atribuye un cierre de todo el capítulo 1.
+
+## Cierre de P01
+
+PASS CI #8, commit `acdf848a97a57c2166e49796b4d56c9a915fed77`, [ejecución 45433251695](https://github.com/lachenmann/tratado-analisis-lean/actions/runs/45433251695). 902 trabajos; 22 consultas conformes (20 propext y Quot.sound; una propext; una sin axiomas). Huellas exactas conservadas en `certificates/v0.1.2/P01_AXIOMAS.txt`; las auditorías posteriores exigen su conservación. Sin nuevas dependencias de Choice ni sorryAx.
