@@ -1,0 +1,69 @@
+import TratadoAnalisis
+
+/-! Firmas históricas extraídas de N05; sus 37 huellas siguen en Audit.lean. -/
+#check TratadoAnalisis.Chapter7_0010.N05A1.pellPair
+#check TratadoAnalisis.Chapter7_0010.N05A1.pell_invariant
+#check TratadoAnalisis.Chapter7_0010.N05A1.pell_numerator_positive
+#check TratadoAnalisis.Chapter7_0010.N05A1.pell_denominator_lower
+#check TratadoAnalisis.Chapter7_0010.N05A1.pell_denominator_ne_zero
+#check TratadoAnalisis.Chapter7_0010.N05A2.pell_rational_numerator_square
+#check TratadoAnalisis.Chapter7_0010.N05A2.pell_rational_denominator_square
+#check TratadoAnalisis.Chapter7_0010.N05A2.pell_rational_two_denominator_square
+#check TratadoAnalisis.Chapter7_0010.N05A2.pell_rational_balance
+#check TratadoAnalisis.Chapter7_0010.N05A2P02.pell_numerator_rational_mem
+#check TratadoAnalisis.Chapter7_0010.N05A2P02.pell_denominator_rational_mem
+#check TratadoAnalisis.Chapter7_0010.N05A2P02.pell_denominator_rational_nonzero
+#check TratadoAnalisis.Chapter7_0010.N05A2P02.pell_fraction_exists
+#check TratadoAnalisis.Chapter7_0010.N05A2P02.pell_fraction_unique
+#check TratadoAnalisis.Chapter7_0010.N05A2P03.pell_nat_rational_positive
+#check TratadoAnalisis.Chapter7_0010.N05A2P03.pell_numerator_rational_positive
+#check TratadoAnalisis.Chapter7_0010.N05A2P03.pell_denominator_rational_positive
+#check TratadoAnalisis.Chapter7_0010.N05A2P03.pell_fraction_positive
+#check TratadoAnalisis.Chapter7_0010.N05A2P03.pell_rational_square_gap
+#check TratadoAnalisis.Chapter7_0010.N05A2P03.pell_nat_two_eq_ratTwoTA
+#check TratadoAnalisis.Chapter7_0010.N05A2P03.pell_fraction_square_lt_two
+#check TratadoAnalisis.Chapter7_0010.N05A2P03.pell_fraction_in_sqrtTwoSet
+#check TratadoAnalisis.Chapter7_0010.N05A2P03.pell_fraction_square_cross
+#check TratadoAnalisis.Chapter7_0010.N05A3.rational_lt_nat_code_exists
+#check TratadoAnalisis.Chapter7_0010.N05A3.nat_rational_lt_of_nat_lt
+#check TratadoAnalisis.Chapter7_0010.N05A3.pell_denominator_square_unbounded
+#check TratadoAnalisis.Chapter7_0010.N05A3.pell_fraction_square_cofinal
+#check TratadoAnalisis.Chapter7_0010.N05A3.quadratic_cofinality_0010
+#check TratadoAnalisis.Chapter7_0010.QuadraticCofinality0010
+#check TratadoAnalisis.Chapter7_0010.section_two_subset_alphaTwo_square_of_cofinal_0010
+#check TratadoAnalisis.Chapter7_0010.alphaTwo_square_eq_section_two_of_cofinal_0010
+#check TratadoAnalisis.Chapter7_0010.quadratic_cofinality_proved_0010
+#check TratadoAnalisis.Chapter7_0010.section_two_subset_alphaTwo_square_0010
+#check TratadoAnalisis.Chapter7_0010.alphaTwo_square_eq_section_two_0010
+#check TratadoAnalisis.Chapter7_0010.alphaTwo_positive_irrational_square_two_0010
+#check TratadoAnalisis.Chapter7_0010.positive_cut_mem_iff_square_mem_0010
+#check TratadoAnalisis.Chapter7_0010.positive_cut_square_injective_0010
+#check TratadoAnalisis.Chapter7_0010.positive_square_two_eq_alphaTwo_0010
+#check TratadoAnalisis.Chapter7_0010.positive_square_two_exists_unique_0010
+
+/-! Auditoría independiente de la nueva interfaz. -/
+#print axioms TratadoAnalisis.Dedekind.complete_ordered_field
+#print axioms TratadoAnalisis.Dedekind.supremum_iff_lub
+#print axioms TratadoAnalisis.Dedekind.upper_bound_iff_subset
+#print axioms TratadoAnalisis.Dedekind.supUnion
+#print axioms TratadoAnalisis.Dedekind.mem_supUnion_iff
+#print axioms TratadoAnalisis.Dedekind.supUnion_eq_sUnion
+#print axioms TratadoAnalisis.Dedekind.supUnion_subset_rationals
+#print axioms TratadoAnalisis.Dedekind.infimum_exists
+#print axioms TratadoAnalisis.Dedekind.archimedean
+#print axioms TratadoAnalisis.Dedekind.IsOrderedCompletionRelational
+#print axioms TratadoAnalisis.Dedekind.ordered_completion
+#print axioms TratadoAnalisis.Dedekind.rational_section_dense
+#print axioms TratadoAnalisis.Dedekind.rational_graph_image_dense
+#print axioms TratadoAnalisis.Dedekind.cut_mem_iff_section_lt
+#print axioms TratadoAnalisis.Dedekind.quadratic_cofinality
+#print axioms TratadoAnalisis.Dedekind.alphaTwo_square_eq_section_two
+#print axioms TratadoAnalisis.Dedekind.alphaTwo_positive_irrational_square_two
+#print axioms TratadoAnalisis.Dedekind.positive_cut_mem_iff_square_mem
+#print axioms TratadoAnalisis.Dedekind.positive_cut_square_injective
+#print axioms TratadoAnalisis.Dedekind.positive_square_two_eq_alphaTwo
+#print axioms TratadoAnalisis.Dedekind.positive_square_two_exists_unique
+#print axioms TratadoAnalisis.Dedekind.additive_inverse_unique
+#print axioms TratadoAnalisis.Dedekind.rational_division_compatible
+#print axioms TratadoAnalisis.Dedekind.rational_division_exists_unique
+#print axioms TratadoAnalisis.Dedekind.isPositiveCut_iff_strictFromLe

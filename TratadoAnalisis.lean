@@ -5,3 +5,7 @@ import TratadoAnalisis.Naturals.Foundational
 import TratadoAnalisis.Naturals.Recursion
 import TratadoAnalisis.Chapter0.SubsetChecks
 import TratadoAnalisis.Chapter0.EmptyChecks
+import TratadoAnalisis.Dedekind.Completeness
+import TratadoAnalisis.Dedekind.Density
+import TratadoAnalisis.Dedekind.SquareRoots
+import TratadoAnalisis.Dedekind.Arithmetic

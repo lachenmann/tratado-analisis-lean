@@ -36,3 +36,9 @@ El alcance no se extiende a esos resultados por publicar esta versión.
 ## Evidencia
 
 La compilación histórica I03 de Windows (Lean 4.32.1) tuvo 896 trabajos con caché existente y se cotejó independientemente con las fuentes exportadas. El cierre posterior fue documental: no ejecutó un nuevo kernel. La referencia de axiomas de esta edición se conserva en `certificates/TA-LEAN-0010/AXIOMAS.txt`. Los logs internos, identificadores de almacenamiento y respaldos privados no se incluyen.
+
+## Consolidación v0.1.1
+
+Se conserva la instantánea histórica de v0.1.0 y su auditoría de 833 declaraciones. El CI #1 de aquella etiqueta concluyó satisfactoriamente en Linux el 24-11-2026 (896 trabajos; 833 huellas; 65 Choice históricas; cero sorryAx), con caché de Mathlib. La consolidación limpia comentarios y diagnósticos de N05 y añade interfaces públicas por alias y un puente definicional de positividad. La auditoría separada comprueba 25 declaraciones nuevas (24 aliases y el puente); no se presentan como 25 resultados matemáticos nuevos. Los dos auxiliares de N05 antes consultados mediante #check siguen consultándose en tests/PublicAPI.lean. El certificado de la versión está en certificates/v0.1.1. No se amplía el alcance matemático del tratado en esta versión.
+
+El siguiente bloque, v0.1.2, preparará los prerrequisitos de Cauchy: TA-THM-00035, TA-THM-00038/00039, TA-PRO-00077 y las leyes naturales TA-THM-00016–00022, TA-PRO-00170 y el cotejo de TA-PRO-00069. La construcción de Cauchy queda para v0.2.0.

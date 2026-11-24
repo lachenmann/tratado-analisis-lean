@@ -6,6 +6,24 @@
 
 Este proyecto formaliza resultados del *Tratado moderno de Análisis* en Lean 4. Su objetivo es reconstruir las estructuras numéricas desde fundamentos conjuntistas, con trazabilidad entre los resultados del manuscrito y sus declaraciones formales, en lugar de limitarse a invocar los tipos numéricos estándar de Mathlib.
 
+## Consolidación: v0.1.1
+
+Interfaces estables en `TratadoAnalisis.Dedekind.Completeness`, `Density`, `SquareRoots` y `Arithmetic`, también disponibles al importar `TratadoAnalisis`. Se preservan los nombres originales y se ofrece [correspondencia de API](docs/CORRESPONDENCIA.md). La versión conserva íntegra la referencia axiomática de v0.1.0 y posee un [manifiesto propio](certificates/v0.1.1/README.md).
+
+Para verificar esta consolidación, desde su revisión correspondiente:
+
+```sh
+lake exe cache get
+lake build
+lake env lean TratadoAnalisis/Audit.lean > audit.log
+lake env lean tests/PublicAPI.lean > public-api.log
+python3 scripts/check_audit.py audit.log
+python3 scripts/check_public_api.py audit.log public-api.log
+sha256sum -c certificates/v0.1.1/SHA256SUMS
+```
+
+La etiqueta v0.1.0 conserva su significado histórico. Los comandos de reproducción de esa etiqueta se mantienen a continuación.
+
 ## Estado inicial: v0.1.0
 
 Instantánea del checkpoint **TA-LEAN-0010**, cerrado el 24 de noviembre de 2026. La cadena fundamental alcanza la construcción de los reales de Dedekind como cuerpo ordenado completo y la existencia y unicidad de la raíz positiva de dos. Para esta última se formaliza una prueba alternativa basada en aproximaciones de Pell.
@@ -35,7 +53,7 @@ lake env lean TratadoAnalisis/Audit.lean > audit.log
 python scripts/check_audit.py audit.log
 ```
 
-El último comando requiere Python 3. El caché de Mathlib reduce el trabajo de compilación; no sustituye la comprobación del código de este proyecto. El registro histórico de Windows documenta `lake build` con 896 trabajos y caché existente. El estado de CI se consulta en GitHub; no se presupone el éxito de una compilación en otro sistema operativo.
+El último comando requiere Python 3. El caché de Mathlib reduce el trabajo de compilación; no sustituye la comprobación del código de este proyecto. El registro histórico de Windows documenta `lake build` con 896 trabajos y caché existente. La etiqueta v0.1.0 superó el CI #1 en Linux: 896 trabajos, 833/833 huellas preservadas, 65 dependencias históricas de Choice, cero sorryAx. [Ejecución verificable](https://github.com/lachenmann/tratado-analisis-lean/actions/runs/45330705764).
 
 Para verificar los bytes de la instantánea inicial en sistemas con GNU coreutils:
 

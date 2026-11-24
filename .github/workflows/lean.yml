@@ -25,4 +25,7 @@ jobs:
           set -euo pipefail
           lake env lean TratadoAnalisis/Audit.lean > audit.log 2>&1 || { tail -n 100 audit.log; exit 1; }
           python3 scripts/check_audit.py audit.log
+          lake env lean tests/PublicAPI.lean > public-api.log 2>&1 || { tail -n 100 public-api.log; exit 1; }
+          python3 scripts/check_public_api.py audit.log public-api.log
+          sha256sum -c certificates/v0.1.1/SHA256SUMS
           git diff --exit-code -- lean-toolchain lakefile.toml lake-manifest.json
