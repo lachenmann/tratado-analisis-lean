@@ -197,7 +197,8 @@ theorem TA_THM_00022_nat_well_order
   rcases TA_THM_00019_nat_total hmNat hxNat with h | h
   · exact h
   · rcases em (x = m) with he | he
-    · exact he ▸ (TA_THM_00020_nat_total_order.1 m hmNat)
+    · rw [he]
+      exact TA_THM_00020_nat_total_order.1 m hmNat
     · have hmem := (TA_THM_00021_strict_iff_mem hxNat hmNat).mp ⟨h, he⟩
       exact (hmin x hmem hx).elim
 
