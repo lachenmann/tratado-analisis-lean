@@ -23,3 +23,7 @@ Se auditan 20 declaraciones nuevas (12 de infraestructura de funciones y 8 de su
 A2: TA-DEF-00106, operaciones puntuales con grafos de operaciones, TA-DEF-00107 y TA-PRO-00108. Después §8.2, distancia racional. La transición al cociente de Cauchy se reserva al capítulo 9.
 
 Estado: CANDIDATO PENDIENTE DE CI. Registro canónico de publicaciones v0.1.0–v0.1.2 y checkpoint TA-LEAN-0011 pendiente de inscripción en la bóveda.
+
+## Cierre de A1
+
+PASS CI #14 (45442938728), commit 5ae25c754b5d47a3bce66b1c5422c38ce8515b8b. 907 trabajos, 20/20 huellas con propext y Quot.sound, 952 históricas y 159 archivos intactos. Se fija A1_AXIOMAS.txt para controles posteriores. Sin nuevas dependencias de Choice ni sorryAx.

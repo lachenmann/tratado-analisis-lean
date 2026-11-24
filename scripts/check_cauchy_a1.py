@@ -12,6 +12,9 @@ NEW_LEAN = {
     "TratadoAnalisis/Foundations/FunctionSpace.lean",
     "TratadoAnalisis/Cauchy/RationalSequences.lean",
     "tests/CauchyA1.lean",
+    "TratadoAnalisis/Foundations/RelationalFunctions.lean",
+    "TratadoAnalisis/Cauchy/SequenceOperations.lean",
+    "tests/CauchyA2.lean",
 }
 FORBIDDEN_PREFIXES = (
     "TratadoAnalisis.Dedekind", "TratadoAnalisis.Abstract",
@@ -21,7 +24,9 @@ FORBIDDEN_PREFIXES = (
 def check_dependencies():
     """Check the project-local import closure of the new mathematical modules."""
     pending = ["TratadoAnalisis.Foundations.FunctionSpace",
-               "TratadoAnalisis.Cauchy.RationalSequences"]
+               "TratadoAnalisis.Cauchy.RationalSequences",
+               "TratadoAnalisis.Foundations.RelationalFunctions",
+               "TratadoAnalisis.Cauchy.SequenceOperations"]
     seen = set()
     while pending:
         name = pending.pop()
@@ -37,7 +42,7 @@ def check_dependencies():
             m = re.match(r"^\s*(?:public\s+)?import\s+(\S+)", line)
             if m and m.group(1).startswith("TratadoAnalisis"):
                 pending.append(m.group(1))
-    print(f"PASS A1: project-local import closure ({len(seen)} modules), no Dedekind or abstract post-rational imports", flush=True)
+    print(f"PASS A1/A2: project-local import closure ({len(seen)} modules), no Dedekind or abstract post-rational imports", flush=True)
 
 def main():
     require(len(sys.argv) == 8,
@@ -73,6 +78,16 @@ def main():
               if not set(ax) <= ALLOWED]
     if errors:
         raise SystemExit("\n".join(errors))
+    require(got == parse_baseline((CERT / "A1_AXIOMAS.txt").read_text(encoding="utf-8")),
+            "Certified A1 fingerprints changed")
+    a1_blobs = {
+        "TratadoAnalisis/Foundations/FunctionSpace.lean": "3165cca23feda04ad41c74f89837fe414dc2da31",
+        "TratadoAnalisis/Cauchy/RationalSequences.lean": "e8875fd6472a8b959e844d38a8e542defc36e508",
+        "tests/CauchyA1.lean": "fb839817ed6cc89ab1c7adc7145a1898a2f30881",
+    }
+    for path, sha in a1_blobs.items():
+        actual = subprocess.check_output(["git", "hash-object", "--no-filters", path], cwd=ROOT).decode("ascii").strip()
+        require(actual == sha, f"Certified A1 source changed: {path}")
     print("PASS TA-LEAN-0011 A1: 20 new queries; 952 preserved; no new Choice or sorryAx", flush=True)
 
 if __name__ == "__main__":
