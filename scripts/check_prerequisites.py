@@ -10,12 +10,13 @@ def main():
     got = parse_log(Path(sys.argv[1]).read_text(encoding="utf-8-sig"))
     if len(expected) != len(set(expected)) or set(got) != set(expected):
         raise SystemExit("P01 declaration mismatch: " + str(set(expected) ^ set(got)))
-    for name, axioms in got.items():
-        if not set(axioms) <= ALLOWED:
-            raise SystemExit(f"P01 forbidden axioms: {name}: {axioms}")
-    print(f"PASS P01: {len(got)} separate queries; no Choice or sorryAx")
     for name in expected:
-        print(name + "|" + (",".join(got[name]) if got[name] else "<none>"))
+        print(name + "|" + (",".join(got[name]) if got[name] else "<none>"), flush=True)
+    errors = [f"P01 forbidden axioms: {name}: {axioms}"
+              for name, axioms in got.items() if not set(axioms) <= ALLOWED]
+    if errors:
+        raise SystemExit("\n".join(errors))
+    print(f"PASS P01: {len(got)} separate queries; no Choice or sorryAx")
 
 if __name__ == "__main__":
     main()

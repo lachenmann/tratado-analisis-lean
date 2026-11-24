@@ -128,20 +128,21 @@ theorem natEncode_mem_natEncode_iff (a b : Nat) :
       · intro h
         exact (ZFSet.notMem_empty (natEncode a) h).elim
       · intro h
-        omega
+        exact (Nat.not_lt_zero a h).elim
   | succ b ih =>
       change (natEncode a : ZFSet.{u}) ∈ insert (natEncode b) (natEncode b) ↔
         a < b.succ
       rw [ZFSet.mem_insert_iff, ih]
       constructor
       · rintro (h | h)
-        · have he := natEncode_injective h
-          omega
-        · omega
+        · rw [natEncode_injective h]
+          exact Nat.lt_succ_self b
+        · exact Nat.lt_trans h (Nat.lt_succ_self b)
       · intro h
-        by_cases he : a = b
+        rcases Nat.lt_trichotomy a b with hlt | he | hgt
+        · exact Or.inr hlt
         · exact Or.inl (congrArg (fun n : Nat => (natEncode n : ZFSet.{u})) he)
-        · exact Or.inr (by omega)
+        · exact (Nat.not_lt_of_ge (Nat.le_of_lt_succ h) hgt).elim
 
 /-- El orden estricto editorial es exactamente el estricto de los códigos. -/
 theorem natEncode_strict_iff (a b : Nat) :
