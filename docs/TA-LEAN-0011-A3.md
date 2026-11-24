@@ -10,3 +10,7 @@ Fuente: capítulo 8 v1.1.0, §§8.2.1–8.2.3. Candidato de los tres nodos:
 Decisión de arquitectura: el módulo abstracto AbsoluteValue de v0.1.2 tiene dependencias de importación posteriores a Q. Se desarrolla una especialización independiente en Rationals/AbsoluteValue.lean, con el mismo máximo de x y −x, y se certifica la equivalencia exacta de predicados en Bridges/RationalAbsoluteValue.lean. Ese puente importa ambas capas pero no es una dependencia de las fuentes de Cauchy. La independencia se exige por clausura de imports locales, incluidos Bridges como prefijo prohibido. El módulo especializado acredita las propiedades necesarias en §8.2; no vuelve a contabilizar TA-DEF-00071 ni afirma haber certificado allí todas las cláusulas de TA-PRO-00071 (en particular, la multiplicatividad no se desarrolla en A3). La generalidad del resultado de v0.1.2 no se modifica.
 
 40 consultas nuevas, además de 1034 huellas previas. Se preservan las fuentes certificadas y no se altera la versión de Lake. Candidato pendiente de CI; el registro canónico de la bóveda sigue pendiente de actualización.
+
+## Cierre de A3
+
+PASS CI #16 (45453380018), commit 431486baa34a399312e058d5e79424f6cbc980f1. 912 trabajos, 40/40 huellas con propext y Quot.sound, 1074 acumuladas y clausura de 42 módulos independiente de Dedekind. A3_AXIOMAS.txt fijado. Sin nuevas dependencias de Choice ni sorryAx.

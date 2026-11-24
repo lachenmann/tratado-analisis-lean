@@ -1,6 +1,7 @@
 """Audit A3 separately from the frozen preceding fingerprints."""
 from pathlib import Path
 import sys
+import subprocess
 from check_audit import ROOT, ALLOWED, parse_baseline, parse_log
 from check_release_v012 import require
 
@@ -25,6 +26,17 @@ def main():
               if not set(ax) <= ALLOWED]
     if errors:
         raise SystemExit("\n".join(errors))
+    require(got == parse_baseline((CERT / "A3_AXIOMAS.txt").read_text(encoding="utf-8")),
+            "Certified A3 fingerprints changed")
+    a3_blobs = {
+        "TratadoAnalisis/Rationals/AbsoluteValue.lean": "6a9c08ab375e44296df57ddd483b7d0a3b35bdf4",
+        "TratadoAnalisis/Cauchy/RationalDistance.lean": "f0ccc9fc486d303e46355c581889b40255883c68",
+        "TratadoAnalisis/Bridges/RationalAbsoluteValue.lean": "c697ef5b5b309007716907fb179a58e160377fa7",
+        "tests/CauchyA3.lean": "57850027bdae3f038adcde462200a7728a4520f4",
+    }
+    for path, sha in a3_blobs.items():
+        actual = subprocess.check_output(["git", "hash-object", "--no-filters", path], cwd=ROOT).decode("ascii").strip()
+        require(actual == sha, f"Certified A3 source changed: {path}")
     print(f"PASS TA-LEAN-0011 A3: {len(got)} new queries; 1034 preserved; no new Choice or sorryAx", flush=True)
 
 if __name__ == "__main__":

@@ -19,6 +19,8 @@ NEW_LEAN = {
     "TratadoAnalisis/Cauchy/RationalDistance.lean",
     "TratadoAnalisis/Bridges/RationalAbsoluteValue.lean",
     "tests/CauchyA3.lean",
+    "TratadoAnalisis/Cauchy/RationalConvergence.lean",
+    "tests/CauchyA4.lean",
 }
 FORBIDDEN_PREFIXES = (
     "TratadoAnalisis.Dedekind", "TratadoAnalisis.Abstract",
@@ -32,7 +34,8 @@ def check_dependencies():
                "TratadoAnalisis.Foundations.RelationalFunctions",
                "TratadoAnalisis.Cauchy.SequenceOperations",
                "TratadoAnalisis.Rationals.AbsoluteValue",
-               "TratadoAnalisis.Cauchy.RationalDistance"]
+               "TratadoAnalisis.Cauchy.RationalDistance",
+               "TratadoAnalisis.Cauchy.RationalConvergence"]
     seen = set()
     while pending:
         name = pending.pop()
@@ -48,7 +51,7 @@ def check_dependencies():
             m = re.match(r"^\s*(?:public\s+)?import\s+(\S+)", line)
             if m and m.group(1).startswith("TratadoAnalisis"):
                 pending.append(m.group(1))
-    print(f"PASS A1/A2/A3: project-local import closure ({len(seen)} modules), no Dedekind or abstract post-rational imports", flush=True)
+    print(f"PASS A1/A2/A3/A4: project-local import closure ({len(seen)} modules), no Dedekind or abstract post-rational imports", flush=True)
 
 def main():
     require(len(sys.argv) == 8,

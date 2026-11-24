@@ -41,4 +41,6 @@ jobs:
           python3 scripts/check_cauchy_a2.py cauchy-a2.log
           lake env lean tests/CauchyA3.lean > cauchy-a3.log 2>&1 || { tail -n 180 cauchy-a3.log; exit 1; }
           python3 scripts/check_cauchy_a3.py cauchy-a3.log
+          lake env lean tests/CauchyA4.lean > cauchy-a4.log 2>&1 || { tail -n 180 cauchy-a4.log; exit 1; }
+          python3 scripts/check_cauchy_a4.py cauchy-a4.log
           git diff --exit-code -- lean-toolchain lakefile.toml lake-manifest.json
