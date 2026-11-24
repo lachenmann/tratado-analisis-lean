@@ -1,0 +1,26 @@
+import TratadoAnalisis.Naturals.OrderedArithmetic
+import TratadoAnalisis.Rationals.Incompleteness
+
+/-! P01 — auditoría separada; no modifica las referencias históricas. -/
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.NatAddRel
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.NatMulRel
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.TA_THM_00016_mul_add
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.TA_THM_00017_mul_assoc
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.TA_THM_00018_mul_comm
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.TA_THM_00019_nat_total
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.TA_THM_00020_nat_total_order
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.natEncode_mem_natEncode_iff
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.natEncode_strict_iff
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.TA_THM_00021_strict_iff_mem
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.TA_PRO_00428_nat_subset_and_zero_mem_succ
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.TA_THM_00022_nat_well_order
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.TA_PRO_00170_nat_trichotomy
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.compareNatCodes
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.compareNatCodes_spec
+#print axioms TratadoAnalisis.Naturals.OrderedArithmetic.TA_PRO_00170_compare_codes_spec
+#print axioms TratadoAnalisis.Rationals.Incompleteness.isSupremum_iff_ratSupremum
+#print axioms TratadoAnalisis.Rationals.Incompleteness.sqrtTwoSet_supremum_hypotheses
+#print axioms TratadoAnalisis.Rationals.Incompleteness.TA_PRO_00077_rationals_not_complete
+#print axioms TratadoAnalisis.AbstractCompleteness.Density0009.omega_member_of_member_nat_manual
+#print axioms TratadoAnalisis.AbstractCompleteness.Density0009.omega_least_manual
+#print axioms TratadoAnalisis.Naturals.Recursion.zero_mem_succ_of_nat

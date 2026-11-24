@@ -1,6 +1,15 @@
 # Historial de versiones
 
-## v0.1.1 — Consolidación (candidata hasta PASS de CI)
+## v0.1.2 — Prerrequisitos de Cauchy
+
+- TA-THM-00016–00022, TA-PRO-00170, TA-PRO-00428 y TA-PRO-00077.
+- TA-DEF-00071, TA-PRO-00071 y TA-THM-00035.
+- TA-DEF-00075, TA-DEF-00076 y TA-THM-00038/00039.
+- TA-PRO-00069, sus cinco apartados.
+- Cuatro CI matemáticos conformes; 952 huellas acumuladas, 159 fuentes/configuraciones. Publicación condicionada al CI final.
+- Conservación de la API y certificados previos. Cauchy queda para v0.2.0.
+
+## v0.1.1 — Consolidación certificada
 
 - Limpieza exclusivamente editorial y de diagnósticos de N05.
 - 24 nombres públicos mediante alias; nombres históricos sin deprecación.

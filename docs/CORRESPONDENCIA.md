@@ -53,3 +53,30 @@ La interfaz pública emplea `alias` del módulo `Batteries.Tactic.Alias` (depend
 | `Arithmetic.lean` | `rational_division_exists_unique` | `TA_COR_00138_division_exists_unique_0010` |
 
 No se introducen deprecaciones antes de v1.0.0. El fichero `certificates/v0.1.1/API_ALIASES.tsv` permite comparar automáticamente las huellas de los aliases con los originales.
+
+## Prerrequisitos matemáticos de v0.1.2
+
+Módulos bajo `TratadoAnalisis`. Los módulos abstractos tienen los namespaces `TratadoAnalisis.AbstractCompleteness.AbsoluteValue`, `TratadoAnalisis.AbstractCompleteness.Equivalences` y `TratadoAnalisis.AbstractCompleteness.NumeralArithmetic`. Los módulos Naturals y Rationals conservan su namespace homónimo. Los nombres públicos son estables y no contienen números de checkpoint.
+
+| ID | Módulo | Declaraciones principales |
+|---|---|---|
+| TA-THM-00016 | `Naturals.OrderedArithmetic` | `TA_THM_00016_mul_add` |
+| TA-THM-00017 | `Naturals.OrderedArithmetic` | `TA_THM_00017_mul_assoc` |
+| TA-THM-00018 | `Naturals.OrderedArithmetic` | `TA_THM_00018_mul_comm` |
+| TA-THM-00019 | `Naturals.OrderedArithmetic` | `TA_THM_00019_nat_total` |
+| TA-THM-00020 | `Naturals.OrderedArithmetic` | `TA_THM_00020_nat_total_order` |
+| TA-THM-00021 | `Naturals.OrderedArithmetic` | `TA_THM_00021_strict_iff_mem` |
+| TA-THM-00022 | `Naturals.OrderedArithmetic` | `TA_THM_00022_nat_well_order` |
+| TA-PRO-00170 | `Naturals.OrderedArithmetic` | `TA_PRO_00170_nat_trichotomy`; `TA_PRO_00170_compare_codes_spec (códigos explícitos)` |
+| TA-PRO-00428 | `Naturals.OrderedArithmetic` | `TA_PRO_00428_nat_subset_and_zero_mem_succ` |
+| TA-PRO-00077 | `Rationals.Incompleteness` | `TA_PRO_00077_rationals_not_complete` |
+| TA-DEF-00071 | `Abstract.AbsoluteValue` | `IsAbsoluteValue`; `TA_DEF_00071_absolute_exists_unique` |
+| TA-PRO-00071 | `Abstract.AbsoluteValue` | `absolute_nonnegative`; `absolute_zero_iff`; `absolute_opposite`; `absolute_bounds`; `absolute_mul`; `absolute_le_iff` |
+| TA-THM-00035 | `Abstract.AbsoluteValue` | `TA_THM_00035_triangle` |
+| TA-DEF-00075 | `Abstract.CompletenessEquivalences` | `HasSeparationProperty`; `HasSeparationPropertyPositive` |
+| TA-THM-00038 | `Abstract.CompletenessEquivalences` | `TA_THM_00038_supremum_iff_separation`; `TA_THM_00038_supremum_iff_separation_positive` |
+| TA-DEF-00076 | `Abstract.CompletenessEquivalences` | `HasClosedIntervalIntersectionProperty`; `HasClosedIntervalIntersectionPositive` |
+| TA-THM-00039 | `Abstract.CompletenessEquivalences` | `TA_THM_00039_complete_iff_intersection`; `TA_THM_00039_supremum_iff_intersection_positive` |
+| TA-PRO-00069 | `Abstract.NumeralArithmetic` | `TA_PRO_00069_numeral_arithmetic_order` |
+
+Las leyes naturales y las leyes de suma/producto de numerales usan inducciones sobre códigos Nat locales y transporte a grafos conjuntistas, no la sustitución del portador. En TA-PRO-00170 la parte ejecutable exige códigos explícitos. El tercero excluido se recibe expresamente para buen orden y para los puentes de no vaciedad de las equivalencias de completitud. Las 94 consultas adicionales se fijan en el certificado v0.1.2; véanse [P01](PREREQUISITES-P01.md), [P02](PREREQUISITES-P02.md), [P03](PREREQUISITES-P03.md), [P04](PREREQUISITES-P04.md).

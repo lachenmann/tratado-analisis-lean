@@ -4,7 +4,7 @@ title: "Tratado moderno de Análisis — Formalización en Lean"
 authors:
   - family-names: Tacheck
     given-names: Gustav A.
-version: 0.1.1
+version: 0.1.2
 repository-code: https://github.com/lachenmann/tratado-analisis-lean
 url: https://matematicaabierta.cl/libros/otros/tratado-de-analisis.html
 license: Apache-2.0

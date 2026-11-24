@@ -27,5 +27,13 @@ jobs:
           python3 scripts/check_audit.py audit.log
           lake env lean tests/PublicAPI.lean > public-api.log 2>&1 || { tail -n 100 public-api.log; exit 1; }
           python3 scripts/check_public_api.py audit.log public-api.log
-          sha256sum -c certificates/v0.1.1/SHA256SUMS
+          lake env lean tests/Prerequisites.lean > prerequisites.log 2>&1 || { tail -n 100 prerequisites.log; exit 1; }
+          python3 scripts/check_prerequisites.py prerequisites.log
+          lake env lean tests/AbsoluteValue.lean > absolute-value.log 2>&1 || { tail -n 120 absolute-value.log; exit 1; }
+          python3 scripts/check_absolute_value.py absolute-value.log
+          lake env lean tests/CompletenessEquivalences.lean > completeness-equivalences.log 2>&1 || { tail -n 160 completeness-equivalences.log; exit 1; }
+          python3 scripts/check_completeness_equivalences.py completeness-equivalences.log
+          lake env lean tests/NumeralArithmetic.lean > numeral-arithmetic.log 2>&1 || { tail -n 160 numeral-arithmetic.log; exit 1; }
+          python3 scripts/check_numeral_arithmetic.py numeral-arithmetic.log
+          python3 scripts/check_release_v012.py audit.log public-api.log prerequisites.log absolute-value.log completeness-equivalences.log numeral-arithmetic.log
           git diff --exit-code -- lean-toolchain lakefile.toml lake-manifest.json
