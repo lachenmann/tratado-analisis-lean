@@ -35,5 +35,6 @@ jobs:
           python3 scripts/check_completeness_equivalences.py completeness-equivalences.log
           lake env lean tests/NumeralArithmetic.lean > numeral-arithmetic.log 2>&1 || { tail -n 160 numeral-arithmetic.log; exit 1; }
           python3 scripts/check_numeral_arithmetic.py numeral-arithmetic.log
-          python3 scripts/check_release_v012.py audit.log public-api.log prerequisites.log absolute-value.log completeness-equivalences.log numeral-arithmetic.log
+          lake env lean tests/CauchyA1.lean > cauchy-a1.log 2>&1 || { tail -n 160 cauchy-a1.log; exit 1; }
+          python3 scripts/check_cauchy_a1.py audit.log public-api.log prerequisites.log absolute-value.log completeness-equivalences.log numeral-arithmetic.log cauchy-a1.log
           git diff --exit-code -- lean-toolchain lakefile.toml lake-manifest.json
