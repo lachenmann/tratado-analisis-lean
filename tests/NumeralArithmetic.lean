@@ -1,0 +1,25 @@
+import TratadoAnalisis.Abstract.NumeralArithmetic
+
+/-! P04: auditoría separada del grafo de numerales. -/
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.NumeralValue
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_graph_isFunc
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_mem
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_exists
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_unique
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_zero
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_succ_relation
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_one
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_add_codes
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_add
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_mul_codes
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_mul
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_step_strict
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.le_strict_trans
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_nonnegative_codes
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_nonnegative
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_positive_of_nonzero
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_le_of_nat_le
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_lt_of_nat_lt
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_injective
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.numeral_order_iff
+#print axioms TratadoAnalisis.AbstractCompleteness.NumeralArithmetic.TA_PRO_00069_numeral_arithmetic_order
