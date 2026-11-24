@@ -4,10 +4,11 @@ import TratadoAnalisis.Rationals.PositiveProducts
 import Mathlib.Tactic.Ring
 
 /-!
-TA-LEAN-0010 / N05-A1-P01: sonda aritmética de las aproximaciones de Pell.
-No modifica ni amplía los resultados de los módulos racionales certificados.
-Nat representa aquí códigos naturales locales. Su transporte a ZFSet,
-NatEmbedding y RatMul será una obligación posterior de N05-A2.
+# Aproximaciones de Pell y raíz positiva de dos
+
+Primera etapa: recurrencia aritmética sobre códigos naturales. El transporte
+al modelo conjuntista de los racionales se establece en las etapas siguientes.
+La demostración completa corresponde a TA-THM-00057 y TA-COR-00028.
 -/
 
 namespace TratadoAnalisis.Chapter7_0010.N05A1
@@ -82,25 +83,14 @@ theorem pell_denominator_ne_zero (n : Nat) :
   have h := pell_denominator_lower n
   omega
 
-#check pellPair
-#check pell_invariant
-#check pell_numerator_positive
-#check pell_denominator_lower
-#check pell_denominator_ne_zero
-#print axioms pell_invariant
-#print axioms pell_numerator_positive
-#print axioms pell_denominator_lower
-#print axioms pell_denominator_ne_zero
 
 end TratadoAnalisis.Chapter7_0010.N05A1
 
 
 /-!
-TA-LEAN-0010 — N05-A2-P01: transporte algebraico de Pell a los racionales
-conjuntistas del tratado, expresado mediante RatAdd y RatMul. La primera
-parte del archivo es una copia byte a byte de la sonda N05-A1-R1 verificada.
-No certifica todavía divisiones, desigualdades racionales, cofinalidad,
-THM-00057 ni COR-00028.
+## Transporte algebraico a los racionales del tratado
+
+Se transporta el invariante de Pell mediante las relaciones RatAdd y RatMul.
 -/
 
 namespace TratadoAnalisis.Chapter7_0010.N05A2
@@ -152,23 +142,15 @@ theorem pell_rational_balance (n : Nat) :
   rw [← pell_invariant n]
   exact natRational_add_nat ((pellPair n).1 * (pellPair n).1) 1
 
-#check pell_rational_numerator_square
-#check pell_rational_denominator_square
-#check pell_rational_two_denominator_square
-#check pell_rational_balance
-#print axioms pell_rational_numerator_square
-#print axioms pell_rational_denominator_square
-#print axioms pell_rational_two_denominator_square
-#print axioms pell_rational_balance
 
 end TratadoAnalisis.Chapter7_0010.N05A2
 
 
 /-!
-TA-LEAN-0010 / N05-A2-P02 (sonda, sin integración):
-El cociente a_n / b_n existe como relación RatDiv del tratado y es único.
-La nueva obligación aritmética es que la imagen racional de b_n pertenece
-al portador de racionales no nulos. No se afirma todavía p_n² < 2.
+## Cocientes racionales de Pell
+
+Se prueba la existencia y unicidad del cociente relacional a_n / b_n,
+incluida la no nulidad de su denominador.
 -/
 
 namespace TratadoAnalisis.Chapter7_0010.N05A2P02
@@ -256,26 +238,15 @@ theorem pell_fraction_unique (n : Nat) {p q : ZFSet.{u}}
     (pell_numerator_rational_mem n)
     (pell_denominator_rational_nonzero n) hp hq
 
-#check pell_numerator_rational_mem
-#check pell_denominator_rational_mem
-#check pell_denominator_rational_nonzero
-#check pell_fraction_exists
-#check pell_fraction_unique
-#print axioms pell_numerator_rational_mem
-#print axioms pell_denominator_rational_mem
-#print axioms pell_denominator_rational_nonzero
-#print axioms pell_fraction_exists
-#print axioms pell_fraction_unique
 
 end TratadoAnalisis.Chapter7_0010.N05A2P02
 
 
 /-!
-TA-LEAN-0010 / N05-A2-P03 (sonda experimental).
-Transporte del orden y del cuadrado para cualquier cociente relacional p=a_n/b_n.
-N05-A1, N05-A2-P01 y N05-A2-P02-R2 se conservan exactamente,
-salvo un nuevo import de PositiveProducts para reutilizar sus lemas.
-No establece cofinalidad ni introduce una seleccion global de cocientes.
+## Positividad y cuadrados menores que dos
+
+Se demuestra el orden y el balance del cuadrado del cociente relacional,
+sin elegir globalmente representantes ni cocientes.
 -/
 
 namespace TratadoAnalisis.Chapter7_0010.N05A2P03
@@ -482,32 +453,15 @@ theorem pell_fraction_in_sqrtTwoSet (n : Nat) {p : ZFSet.{u}}
   exact TA_DEF_00066_mem_sqrtTwoSet_iff.mpr
     ⟨hpQ, hpPos.1, pp, hpp, pell_fraction_square_lt_two n hd hpp⟩
 
-#check pell_nat_rational_positive
-#check pell_numerator_rational_positive
-#check pell_denominator_rational_positive
-#check pell_fraction_positive
-#check pell_rational_square_gap
-#check pell_nat_two_eq_ratTwoTA
-#check pell_fraction_square_lt_two
-#check pell_fraction_in_sqrtTwoSet
-#print axioms pell_nat_rational_positive
-#print axioms pell_numerator_rational_positive
-#print axioms pell_denominator_rational_positive
-#print axioms pell_fraction_positive
-#print axioms pell_rational_square_gap
-#print axioms pell_nat_two_eq_ratTwoTA
-#print axioms pell_fraction_square_lt_two
-#print axioms pell_fraction_in_sqrtTwoSet
 
 end TratadoAnalisis.Chapter7_0010.N05A2P03
 
 
 /-!
-TA-LEAN-0010 / N05-A3-P01: cofinalidad racional de los cuadrados de Pell.
-El prefijo N05-A2-P03-P01-R1 se conserva integro.
-Primero se expone la consecuencia de un auxiliar ya probado en ese prefijo;
-despues se combinan la propiedad arquimediana y el balance de Pell.
-Esta sonda no integra resultados en Audit.lean.
+## Cofinalidad racional de los cuadrados de Pell
+
+Se combinan la propiedad arquimediana y el invariante de Pell para obtener
+la cofinalidad requerida en la demostración de la igualdad de cortaduras.
 -/
 
 namespace TratadoAnalisis.Chapter7_0010.N05A2P03
@@ -543,8 +497,6 @@ theorem pell_fraction_square_cross (n : Nat) {p pp : ZFSet.{u}}
     (pell_rational_numerator_square n)
     (pell_rational_denominator_square n)
 
-#check pell_fraction_square_cross
-#print axioms pell_fraction_square_cross
 
 end TratadoAnalisis.Chapter7_0010.N05A2P03
 
@@ -761,27 +713,17 @@ theorem quadratic_cofinality_0010
     ⟨_n, p, pp, _, hpSet, hpPositive, hPP, hqPP, _⟩
   exact ⟨p, pp, hpSet, hpPositive, hPP, hqPP⟩
 
-#check rational_lt_nat_code_exists
-#check nat_rational_lt_of_nat_lt
-#check pell_denominator_square_unbounded
-#check pell_fraction_square_cofinal
-#check quadratic_cofinality_0010
-#print axioms rational_lt_nat_code_exists
-#print axioms nat_rational_lt_of_nat_lt
-#print axioms pell_denominator_square_unbounded
-#print axioms pell_fraction_square_cofinal
-#print axioms quadratic_cofinality_0010
 
 end TratadoAnalisis.Chapter7_0010.N05A3
 
 
 
 /-!
-TA-LEAN-0010 / N05-P01 — Sonda condicional de la interfaz del producto.
-Este archivo NO demuestra la cofinalidad ni afirma el cierre de N05.
-Solo verifica que la cofinalidad, UNA VEZ DEMOSTRADA en Lean,
-implica 2_D ≤ alphaTwoCut² y, junto con N04, la igualdad.
-No contiene axiomas nuevos, sorry, admit ni modificaciones de fuente.
+## Puente condicional al producto de cortaduras
+
+La cofinalidad racional implica la inclusión de la sección de dos en el
+cuadrado de alphaTwoCut. Junto con la inclusión inversa, da la igualdad.
+La hipótesis de cofinalidad se descarga en la sección siguiente.
 -/
 namespace TratadoAnalisis.Chapter7_0010
 
@@ -804,7 +746,7 @@ open TratadoAnalisis.Dedekind.Positivity
 open TratadoAnalisis.Dedekind.RationalSection
 open TratadoAnalisis.Dedekind.Multiplication
 
-/-- OBLIGACIÓN ABIERTA N05-A; una definición de Prop, no un axioma.
+/-- Predicado de cofinalidad cuadrática; es una definición de Prop, no un axioma.
 Para cada q racional menor que 2, hay un p positivo de S₂ con q < p². -/
 def QuadraticCofinality0010 : Prop :=
   ∀ q : ZFSet.{u}, q ∈ rationalsTA → RatLT q (TratadoAnalisis.Rationals.IrrationalitySqrtTwo.ratTwoTA : ZFSet.{u}) →
@@ -812,7 +754,7 @@ def QuadraticCofinality0010 : Prop :=
       p ∈ sqrtTwoSet ∧ RatLT ratZero p ∧
       RatMul p p pp ∧ RatLT q pp
 
-/-- N05-B condicional: se usa el mismo p en los dos factores positivos. -/
+/-- Puente condicional de inclusión: se usa el mismo p en los dos factores positivos. -/
 theorem section_two_subset_alphaTwo_square_of_cofinal_0010
     (em : ∀ p : Prop, p ∨ ¬p)
     (hcofinal : QuadraticCofinality0010.{u}) :
@@ -830,7 +772,7 @@ theorem section_two_subset_alphaTwo_square_of_cofinal_0010
   rw [alphaTwo_square_is_positive_product_0010 em]
   exact hprod
 
-/-- N05-C condicional: la igualdad se obtiene por extensionalidad y N04. -/
+/-- Puente condicional de igualdad: se obtiene por extensionalidad y la inclusión inversa. -/
 theorem alphaTwo_square_eq_section_two_of_cofinal_0010
     (em : ∀ p : Prop, p ∨ ¬p)
     (hcofinal : QuadraticCofinality0010.{u}) :
@@ -844,21 +786,15 @@ theorem alphaTwo_square_eq_section_two_of_cofinal_0010
   · intro hq
     exact (section_two_subset_alphaTwo_square_of_cofinal_0010 em hcofinal) hq
 
-#check QuadraticCofinality0010
-#check section_two_subset_alphaTwo_square_of_cofinal_0010
-#check alphaTwo_square_eq_section_two_of_cofinal_0010
-#print axioms section_two_subset_alphaTwo_square_of_cofinal_0010
-#print axioms alphaTwo_square_eq_section_two_of_cofinal_0010
 
 end TratadoAnalisis.Chapter7_0010
 
 
 /-!
-TA-LEAN-0010 / N05-A4-P01: aplicacion de la cofinalidad al puente R2.
-Las demostraciones de A3 y del puente se conservan literalmente.
-La cofinalidad ya no es una hipotesis de la inclusion ni de la igualdad.
-El parametro logico em del puente se mantiene explicito.
-No se afirma unicidad ni se integran resultados en Audit.lean.
+## Existencia: el cuadrado de alphaTwoCut es la sección de dos
+
+Se aplica la cofinalidad demostrada al puente anterior; el tercero
+excluido sigue siendo un parámetro explícito.
 -/
 
 namespace TratadoAnalisis.Chapter7_0010
@@ -873,7 +809,7 @@ open TratadoAnalisis.Dedekind.AlphaTwo
 open TratadoAnalisis.Dedekind.Positivity
 open TratadoAnalisis.Dedekind.Multiplication
 
-/-- La obligacion racional del puente dispone ahora de una demostracion. -/
+/-- La cofinalidad racional requerida por el puente está demostrada. -/
 theorem quadratic_cofinality_proved_0010 :
     QuadraticCofinality0010.{u} := by
   intro q hq hqTwo
@@ -913,23 +849,15 @@ theorem alphaTwo_positive_irrational_square_two_0010
   · intro q hq
     exact TratadoAnalisis.Dedekind.AlphaTwo.TA_PRO_00082_alphaTwoCut_ne_rationalSection hq
 
-#check quadratic_cofinality_proved_0010
-#check section_two_subset_alphaTwo_square_0010
-#check alphaTwo_square_eq_section_two_0010
-#check alphaTwo_positive_irrational_square_two_0010
-#print axioms quadratic_cofinality_proved_0010
-#print axioms section_two_subset_alphaTwo_square_0010
-#print axioms alphaTwo_square_eq_section_two_0010
-#print axioms alphaTwo_positive_irrational_square_two_0010
 
 end TratadoAnalisis.Chapter7_0010
 
 
 /-!
-TA-LEAN-0010 / N05-A5-P01: unicidad por pertenencia a cuadrados positivos.
-Se trabaja con los productos y las cortaduras conjuntistas del tratado.
-La logica em permanece explicita; no se eligen representantes globales.
-Esta extension no asigna aun IDs definitivos del manuscrito ni modifica Audit.
+## Unicidad de la raíz cuadrada positiva
+
+La inyectividad del cuadrado sobre cortaduras positivas permite concluir
+TA-THM-00057 y TA-COR-00028. Se conserva el parámetro lógico em.
 -/
 
 namespace TratadoAnalisis.Chapter7_0010
@@ -1073,13 +1001,5 @@ theorem positive_square_two_exists_unique_0010
   intro β hβ
   exact positive_square_two_eq_alphaTwo_0010 em hβ.1 hβ.2.1 hβ.2.2
 
-#check TratadoAnalisis.Chapter7_0010.positive_cut_mem_iff_square_mem_0010
-#check TratadoAnalisis.Chapter7_0010.positive_cut_square_injective_0010
-#check TratadoAnalisis.Chapter7_0010.positive_square_two_eq_alphaTwo_0010
-#check TratadoAnalisis.Chapter7_0010.positive_square_two_exists_unique_0010
-#print axioms TratadoAnalisis.Chapter7_0010.positive_cut_mem_iff_square_mem_0010
-#print axioms TratadoAnalisis.Chapter7_0010.positive_cut_square_injective_0010
-#print axioms TratadoAnalisis.Chapter7_0010.positive_square_two_eq_alphaTwo_0010
-#print axioms TratadoAnalisis.Chapter7_0010.positive_square_two_exists_unique_0010
 
 end TratadoAnalisis.Chapter7_0010

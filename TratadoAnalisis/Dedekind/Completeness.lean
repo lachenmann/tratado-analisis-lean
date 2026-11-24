@@ -1,0 +1,22 @@
+import Batteries.Tactic.Alias
+import TratadoAnalisis.Chapter7_0010.Completeness0010
+import TratadoAnalisis.Chapter7_0010.Consequences0010
+import TratadoAnalisis.Chapter7_0010.Completion0010
+import TratadoAnalisis.Chapter7_0010.I03EditorialBridges0010
+
+/-! Interfaz pública estable: los nombres históricos se conservan. -/
+namespace TratadoAnalisis.Dedekind
+
+alias complete_ordered_field := TratadoAnalisis.Chapter7_0010.TA_THM_00056_dedekind_complete_0010
+alias supremum_iff_lub := TratadoAnalisis.Chapter7_0010.supremum_iff_dedekind_lub_0010
+alias upper_bound_iff_subset := TratadoAnalisis.Chapter7_0010.TA_PRO_00104_upper_iff_subset_0010
+alias supUnion := TratadoAnalisis.Chapter7_0010.DedSupUnion0010
+alias mem_supUnion_iff := TratadoAnalisis.Chapter7_0010.mem_dedSupUnion_iff_0010
+alias supUnion_eq_sUnion := TratadoAnalisis.Chapter7_0010.TA_DEF_00104_union_eq_0010
+alias supUnion_subset_rationals := TratadoAnalisis.Chapter7_0010.TA_DEF_00104_union_subset_rationals_0010
+alias infimum_exists := TratadoAnalisis.Chapter7_0010.TA_COR_00025_dedekind_infimum_0010
+alias archimedean := TratadoAnalisis.Chapter7_0010.TA_COR_00026_dedekind_archimedean_0010
+alias IsOrderedCompletionRelational := TratadoAnalisis.Chapter7_0010.IsOrderedCompletionRelational0010
+alias ordered_completion := TratadoAnalisis.Chapter7_0010.TA_PRO_00106_dedekind_completion_0010
+
+end TratadoAnalisis.Dedekind
