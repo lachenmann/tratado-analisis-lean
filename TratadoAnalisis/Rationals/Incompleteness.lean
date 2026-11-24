@@ -10,6 +10,7 @@ universe u
 open TratadoAnalisis.AbstractCompleteness.Manual0008
 open TratadoAnalisis.Rationals.Construction
 open TratadoAnalisis.Rationals.Additive
+open TratadoAnalisis.Rationals.Multiplicative
 open TratadoAnalisis.Rationals.OrderDefinition
 open TratadoAnalisis.Rationals.SqrtTwoSet
 open TratadoAnalisis.Rationals.IrrationalitySqrtTwo
