@@ -1,0 +1,11 @@
+TratadoAnalisis.Cauchy.BisectionWidths.BisectWidth|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_mem|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_exists|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_unique|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_positive|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_zero|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_succ|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionWidths.dyadic_width_product|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionWidths.nat_succ_le_pow_two|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionWidths.dyadic_width_division|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionWidths.TA_LEM_00031_widths_small|Quot.sound,propext

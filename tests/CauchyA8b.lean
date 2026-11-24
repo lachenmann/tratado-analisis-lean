@@ -1,0 +1,12 @@
+import TratadoAnalisis.Cauchy.BisectionInvariants
+
+#print axioms TratadoAnalisis.Cauchy.BisectionInvariants.midpoint_between
+#print axioms TratadoAnalisis.Cauchy.BisectionInvariants.midpoint_double
+#print axioms TratadoAnalisis.Cauchy.BisectionInvariants.double_is_half
+#print axioms TratadoAnalisis.Cauchy.BisectionInvariants.midpoint_halves
+#print axioms TratadoAnalisis.Cauchy.BisectionInvariants.BisectBracket
+#print axioms TratadoAnalisis.Cauchy.BisectionInvariants.initial_bracket
+#print axioms TratadoAnalisis.Cauchy.BisectionInvariants.bisect_step_invariants
+#print axioms TratadoAnalisis.Cauchy.BisectionInvariants.bisect_bracket
+#print axioms TratadoAnalisis.Cauchy.BisectionInvariants.bisect_adjacent
+#print axioms TratadoAnalisis.Cauchy.BisectionInvariants.TA_LEM_00030_nested

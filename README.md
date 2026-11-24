@@ -6,6 +6,21 @@
 
 Este proyecto formaliza resultados del *Tratado moderno de Análisis* en Lean 4. Su objetivo es reconstruir las estructuras numéricas desde fundamentos conjuntistas, con trazabilidad entre los resultados del manuscrito y sus declaraciones formales, en lugar de limitarse a invocar los tipos numéricos estándar de Mathlib.
 
+## Sucesiones racionales y aproximación — v0.2.0
+
+Candidato del corte TA-LEAN-0011 C08/R03: 185 archivos fuente/configuración y 1230 consultas axiomáticas (278 adicionales). 28 nodos del capítulo 8 y TA-PRO-00014. Certificación local: 920 trabajos y 156 relecturas; cero nuevas dependencias de Choice y cero sorryAx. La comprobación externa se consulta en CI. No se afirma la construcción del cuerpo de Cauchy ni la certificación algorítmica global.
+
+- [Alcance y correspondencia C08](docs/TA-LEAN-0011-C08.md)
+- [Certificado v0.2.0](certificates/v0.2.0/README.md)
+
+```sh
+lake exe cache get
+lake build
+python3 scripts/check_release_v020.py
+```
+
+Se preservan todos los archivos certificados, incluido `lakefile.toml` (versión interna 0.1.2) y el agregador histórico. Importar directamente `TratadoAnalisis.Cauchy.SequentialIncompleteness` u otros módulos. Las secciones siguientes conservan el historial de versiones anteriores.
+
 ## Prerrequisitos de Cauchy: v0.1.2
 
 Se incorporan 18 nodos editoriales (aritmética y orden natural, incompletitud de los racionales, valor absoluto, desigualdad triangular, equivalencias de completitud y numerales en cuerpos ordenados), con 94 consultas adicionales. Los módulos nuevos pueden importarse individualmente o mediante `import TratadoAnalisis`.

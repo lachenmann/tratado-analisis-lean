@@ -1,3 +1,7 @@
+# Correspondencia vigente v0.2.0 (candidato)
+
+Véase [C08](TA-LEAN-0011-C08.md). A continuación, correspondencia histórica.
+
 # Correspondencia editorial — TA-LEAN-0010
 
 Los nombres de módulos de esta tabla se sitúan bajo `TratadoAnalisis/Chapter7_0010/`. Las declaraciones de esta tabla comparten el namespace `TratadoAnalisis.Chapter7_0010`. Cada resultado se cotejó con el enunciado editorial; donde la prueba difiere se indica expresamente.

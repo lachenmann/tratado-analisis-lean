@@ -1,0 +1,42 @@
+import TratadoAnalisis.Cauchy.RationalConvergence
+
+/-! A4: convergencia, límite único y módulo mínimo canónico. -/
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.natLE_refl_local
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.natLE_antisymm_local
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.natLE_total_local
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.common_upper_index
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.ratAdd_pair_lt
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.positive_half
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.WithinDistance
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.withinDistance_iff_value
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.withinDistance_self
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.withinDistance_symm
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.withinDistance_triangle
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.WithinAbsolute
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.WithinWindow
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.withinDistance_iff_absolute
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.withinDistance_iff_window
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.TailProperty
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.tailProperty_iff
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.ConvergesBy
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.RationalConverges
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.TA_NOT_00019_convergence_notation_iff
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.RationalConvergent
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.ConvergesAbsolute
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.ConvergesWindow
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.convergesBy_iff
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.TA_PRO_00111_convergence_equivalences
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.TA_PRO_00112_constant_converges
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.TA_THM_00058_rational_limit_unique
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.positiveRationals
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.mem_positiveRationals_iff
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.IsConvergenceModulus
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.convergence_of_modulus
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.least_natural_index
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.MinimalTailIndex
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.minimalTailIndex_exists_unique
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.minimalConvergenceModulus
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.minimalConvergenceModulus_mem
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.minimalConvergenceModulus_isModulus
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.minimalConvergenceModulus_le
+#print axioms TratadoAnalisis.Cauchy.RationalConvergence.minimalConvergenceModulus_exists_unique

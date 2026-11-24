@@ -1,0 +1,13 @@
+import TratadoAnalisis.Cauchy.BisectionWidths
+
+#print axioms TratadoAnalisis.Cauchy.BisectionWidths.BisectWidth
+#print axioms TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_mem
+#print axioms TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_exists
+#print axioms TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_unique
+#print axioms TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_positive
+#print axioms TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_zero
+#print axioms TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_succ
+#print axioms TratadoAnalisis.Cauchy.BisectionWidths.dyadic_width_product
+#print axioms TratadoAnalisis.Cauchy.BisectionWidths.nat_succ_le_pow_two
+#print axioms TratadoAnalisis.Cauchy.BisectionWidths.dyadic_width_division
+#print axioms TratadoAnalisis.Cauchy.BisectionWidths.TA_LEM_00031_widths_small

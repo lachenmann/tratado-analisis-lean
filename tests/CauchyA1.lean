@@ -1,0 +1,23 @@
+import TratadoAnalisis.Cauchy.RationalSequences
+
+/-! A1: auditoría independiente de la construcción de Dedekind. -/
+#print axioms TratadoAnalisis.Foundations.FunctionSpace.functionSpaceAmbient
+#print axioms TratadoAnalisis.Foundations.FunctionSpace.functionGraph_subset_product
+#print axioms TratadoAnalisis.Foundations.FunctionSpace.functionTriple_mem_ambient
+#print axioms TratadoAnalisis.Foundations.FunctionSpace.functionSpace
+#print axioms TratadoAnalisis.Foundations.FunctionSpace.TA_PRO_00014_mem_functionSpace_iff
+#print axioms TratadoAnalisis.Foundations.FunctionSpace.TA_PRO_00014_functionSpace_exists_unique
+#print axioms TratadoAnalisis.Foundations.FunctionSpace.FunctionValue
+#print axioms TratadoAnalisis.Foundations.FunctionSpace.functionValue_iff_graph
+#print axioms TratadoAnalisis.Foundations.FunctionSpace.functionValue_mem
+#print axioms TratadoAnalisis.Foundations.FunctionSpace.functionValue_exists_unique
+#print axioms TratadoAnalisis.Foundations.FunctionSpace.functionValue_unique
+#print axioms TratadoAnalisis.Foundations.FunctionSpace.function_eq_iff_values
+#print axioms TratadoAnalisis.Cauchy.RationalSequences.rationalSequences
+#print axioms TratadoAnalisis.Cauchy.RationalSequences.TA_DEF_00105_mem_rationalSequences_iff
+#print axioms TratadoAnalisis.Cauchy.RationalSequences.TA_DEF_00105_rationalSequences_exists_unique
+#print axioms TratadoAnalisis.Cauchy.RationalSequences.SequenceValue
+#print axioms TratadoAnalisis.Cauchy.RationalSequences.sequenceValue_mem
+#print axioms TratadoAnalisis.Cauchy.RationalSequences.sequenceValue_exists_unique
+#print axioms TratadoAnalisis.Cauchy.RationalSequences.sequenceValue_unique
+#print axioms TratadoAnalisis.Cauchy.RationalSequences.TA_PRO_00107_sequence_eq_iff_values

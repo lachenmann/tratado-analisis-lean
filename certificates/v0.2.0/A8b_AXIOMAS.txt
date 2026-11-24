@@ -1,0 +1,10 @@
+TratadoAnalisis.Cauchy.BisectionInvariants.midpoint_between|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionInvariants.midpoint_double|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionInvariants.double_is_half|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionInvariants.midpoint_halves|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionInvariants.BisectBracket|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionInvariants.initial_bracket|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionInvariants.bisect_step_invariants|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionInvariants.bisect_bracket|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionInvariants.bisect_adjacent|Quot.sound,propext
+TratadoAnalisis.Cauchy.BisectionInvariants.TA_LEM_00030_nested|Quot.sound,propext
