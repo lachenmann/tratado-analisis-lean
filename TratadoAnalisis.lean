@@ -9,3 +9,8 @@ import TratadoAnalisis.Dedekind.Completeness
 import TratadoAnalisis.Dedekind.Density
 import TratadoAnalisis.Dedekind.SquareRoots
 import TratadoAnalisis.Dedekind.Arithmetic
+import TratadoAnalisis.Naturals.OrderedArithmetic
+import TratadoAnalisis.Rationals.Incompleteness
+import TratadoAnalisis.Abstract.AbsoluteValue
+import TratadoAnalisis.Abstract.CompletenessEquivalences
+import TratadoAnalisis.Abstract.NumeralArithmetic

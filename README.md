@@ -6,11 +6,39 @@
 
 Este proyecto formaliza resultados del *Tratado moderno de Análisis* en Lean 4. Su objetivo es reconstruir las estructuras numéricas desde fundamentos conjuntistas, con trazabilidad entre los resultados del manuscrito y sus declaraciones formales, en lugar de limitarse a invocar los tipos numéricos estándar de Mathlib.
 
-## Consolidación: v0.1.1
+## Prerrequisitos de Cauchy: v0.1.2
+
+Se incorporan 18 nodos editoriales (aritmética y orden natural, incompletitud de los racionales, valor absoluto, desigualdad triangular, equivalencias de completitud y numerales en cuerpos ordenados), con 94 consultas adicionales. Los módulos nuevos pueden importarse individualmente o mediante `import TratadoAnalisis`.
+
+| Indicador | v0.1.2 |
+|---|---:|
+| Fuentes Lean, incluidas pruebas | 156 |
+| Archivos de fuente y configuración | 159 |
+| Consultas axiomáticas | 952 |
+| Dependencias de Classical.choice históricas | 65 |
+| Dependencias de sorryAx | 0 |
+
+Los cuatro bloques matemáticos han superado sus CI. La certificación de la integración se consulta en GitHub Actions. Véanse [certificado](certificates/v0.1.2/README.md), [correspondencia](docs/CORRESPONDENCIA.md) y [alcance](docs/ALCANCE.md). La construcción de Cauchy queda para v0.2.0.
+
+Para reproducir desde la revisión de v0.1.2:
+
+```sh
+lake exe cache get
+lake build
+lake env lean TratadoAnalisis/Audit.lean > audit.log
+lake env lean tests/PublicAPI.lean > public-api.log
+lake env lean tests/Prerequisites.lean > prerequisites.log
+lake env lean tests/AbsoluteValue.lean > absolute-value.log
+lake env lean tests/CompletenessEquivalences.lean > completeness-equivalences.log
+lake env lean tests/NumeralArithmetic.lean > numeral-arithmetic.log
+python3 scripts/check_release_v012.py audit.log public-api.log prerequisites.log absolute-value.log completeness-equivalences.log numeral-arithmetic.log
+```
+
+## Consolidación histórica: v0.1.1
 
 Interfaces estables en `TratadoAnalisis.Dedekind.Completeness`, `Density`, `SquareRoots` y `Arithmetic`, también disponibles al importar `TratadoAnalisis`. Se preservan los nombres originales y se ofrece [correspondencia de API](docs/CORRESPONDENCIA.md). La versión conserva íntegra la referencia axiomática de v0.1.0 y posee un [manifiesto propio](certificates/v0.1.1/README.md).
 
-Para verificar esta consolidación, desde su revisión correspondiente:
+Para verificar esta consolidación, desde la etiqueta `v0.1.1` (no desde una versión posterior):
 
 ```sh
 lake exe cache get
@@ -69,7 +97,7 @@ sha256sum -c certificates/TA-LEAN-0010/SHA256SUMS
 - `certificates/TA-LEAN-0010/`: huellas de la instantánea original y de las consultas axiomáticas.
 - `docs/`: correspondencia editorial, metodología, dependencias y límites.
 
-El código de la instantánea conserva sus rutas y bytes originales. Los archivos auxiliares históricos en la raíz se preservan; el build principal no acredita su reelaboración individual.
+Los certificados de cada versión identifican sus rutas y bytes correspondientes. Los archivos históricos se mantienen, salvo las modificaciones expresamente documentadas. Los archivos auxiliares históricos en la raíz se preservan; el build principal no acredita su reelaboración individual.
 
 ## Fundamentos y licencia
 
