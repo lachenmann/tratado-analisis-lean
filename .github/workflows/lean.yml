@@ -32,4 +32,6 @@ jobs:
           python3 scripts/check_prerequisites.py prerequisites.log
           lake env lean tests/AbsoluteValue.lean > absolute-value.log 2>&1 || { tail -n 120 absolute-value.log; exit 1; }
           python3 scripts/check_absolute_value.py absolute-value.log
+          lake env lean tests/CompletenessEquivalences.lean > completeness-equivalences.log 2>&1 || { tail -n 160 completeness-equivalences.log; exit 1; }
+          python3 scripts/check_completeness_equivalences.py completeness-equivalences.log
           git diff --exit-code -- lean-toolchain lakefile.toml lake-manifest.json

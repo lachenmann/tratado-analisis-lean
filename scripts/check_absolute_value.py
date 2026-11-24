@@ -16,6 +16,10 @@ def main():
               if not set(ax) <= ALLOWED]
     if errors:
         raise SystemExit("\n".join(errors))
+    baseline = (ROOT / "certificates/v0.1.2/P02_AXIOMAS.txt").read_text(encoding="utf-8").splitlines()
+    actual = [name + "|" + (",".join(got[name]) if got[name] else "<none>") for name in names]
+    if actual != baseline:
+        raise SystemExit("Certified P02 fingerprints changed")
     print(f"PASS P02: {len(got)} separate queries; no Choice or sorryAx")
 
 if __name__ == "__main__":
