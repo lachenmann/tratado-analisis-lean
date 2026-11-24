@@ -333,7 +333,6 @@ theorem least_natural_index
           rcases Nat.lt_trichotomy i k with hlt | he | hgt
           · exact (h ⟨i, hlt, hi⟩).elim
           · rw [he]
-            exact Nat.le_refl k
           · exact Nat.le_of_lt hgt
   obtain ⟨n, hn, hp⟩ := hExists
   obtain ⟨k, rfl⟩ := exists_natEncode_eq_of_mem hn

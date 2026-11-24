@@ -1,0 +1,28 @@
+import TratadoAnalisis.Cauchy.CauchySequences
+
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.PairTailProperty
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.pairTailProperty_iff
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.CauchyBy
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.RationalCauchy
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.TA_DEF_00110_cauchy_iff
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.cauchySequences
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.TA_DEF_00111_mem_cauchySequences_iff
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.cauchySequences_subset
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.TA_DEF_00111_cauchySequences_exists_unique
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.CauchyAbsolute
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.CauchyWindow
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.cauchyBy_iff
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.TA_PRO_00113_cauchy_equivalences
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.constant_is_cauchy
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.TA_PRO_00114_constant_mem_cauchySequences
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.cauchySequences_inhabited
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.cauchySequences_ne_empty
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.IsCauchyModulus
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.cauchy_of_modulus
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.MinimalCauchyIndex
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.minimalCauchyIndex_exists_unique
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.minimalCauchyModulus
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.minimalCauchyModulus_mem
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.minimalCauchyModulus_isModulus
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.minimalCauchyModulus_le
+#print axioms TratadoAnalisis.Cauchy.CauchySequences.minimalCauchyModulus_exists_unique

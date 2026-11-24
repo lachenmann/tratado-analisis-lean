@@ -1,3 +1,7 @@
+# Alcance vigente v0.2.0 (candidato)
+
+Véase [C08](TA-LEAN-0011-C08.md). A continuación, alcance histórico.
+
 # Alcance y límites de v0.1.0
 
 Base: TA-LEAN-0010, cierre canónico del 24-11-2026. Se exportan las 142 fuentes Lean y tres configuraciones certificadas, sin reescribir las demostraciones, junto con la referencia de 833 huellas de auditoría. La instantánea original de fuentes y configuración tiene 1.046.594 bytes.

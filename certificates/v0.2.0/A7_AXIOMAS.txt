@@ -1,0 +1,7 @@
+TratadoAnalisis.Cauchy.BoundedSequences.RationalBounded|Quot.sound,propext
+TratadoAnalisis.Cauchy.BoundedSequences.InitialBound|Quot.sound,propext
+TratadoAnalisis.Cauchy.BoundedSequences.ratAdd_nonnegative_bounds|Quot.sound,propext
+TratadoAnalisis.Cauchy.BoundedSequences.ratSub_zero_right_rel|Quot.sound,propext
+TratadoAnalisis.Cauchy.BoundedSequences.distance_zero_right_iff_abs|Quot.sound,propext
+TratadoAnalisis.Cauchy.BoundedSequences.TA_LEM_00029_initial_bounded|Quot.sound,propext
+TratadoAnalisis.Cauchy.BoundedSequences.TA_THM_00060_cauchy_bounded|Quot.sound,propext

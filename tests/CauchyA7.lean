@@ -1,0 +1,9 @@
+import TratadoAnalisis.Cauchy.BoundedSequences
+
+#print axioms TratadoAnalisis.Cauchy.BoundedSequences.RationalBounded
+#print axioms TratadoAnalisis.Cauchy.BoundedSequences.InitialBound
+#print axioms TratadoAnalisis.Cauchy.BoundedSequences.ratAdd_nonnegative_bounds
+#print axioms TratadoAnalisis.Cauchy.BoundedSequences.ratSub_zero_right_rel
+#print axioms TratadoAnalisis.Cauchy.BoundedSequences.distance_zero_right_iff_abs
+#print axioms TratadoAnalisis.Cauchy.BoundedSequences.TA_LEM_00029_initial_bounded
+#print axioms TratadoAnalisis.Cauchy.BoundedSequences.TA_THM_00060_cauchy_bounded

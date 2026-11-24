@@ -1,0 +1,11 @@
+TratadoAnalisis.Cauchy.BisectionWidths.BisectWidth
+TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_mem
+TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_exists
+TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_unique
+TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_positive
+TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_zero
+TratadoAnalisis.Cauchy.BisectionWidths.bisectWidth_succ
+TratadoAnalisis.Cauchy.BisectionWidths.dyadic_width_product
+TratadoAnalisis.Cauchy.BisectionWidths.nat_succ_le_pow_two
+TratadoAnalisis.Cauchy.BisectionWidths.dyadic_width_division
+TratadoAnalisis.Cauchy.BisectionWidths.TA_LEM_00031_widths_small

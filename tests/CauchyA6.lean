@@ -1,0 +1,14 @@
+import TratadoAnalisis.Cauchy.ConvergentIsCauchy
+
+#print axioms TratadoAnalisis.Cauchy.ConvergentIsCauchy.pairTail_of_convergenceTail
+#print axioms TratadoAnalisis.Cauchy.ConvergentIsCauchy.rationalConverges_isCauchy
+#print axioms TratadoAnalisis.Cauchy.ConvergentIsCauchy.TA_THM_00059_convergent_mem_cauchySequences
+#print axioms TratadoAnalisis.Cauchy.ConvergentIsCauchy.rationalConvergent_mem_cauchySequences
+#print axioms TratadoAnalisis.Cauchy.ConvergentIsCauchy.halfPrecision_exists_unique
+#print axioms TratadoAnalisis.Cauchy.ConvergentIsCauchy.halfPrecision_double
+#print axioms TratadoAnalisis.Cauchy.ConvergentIsCauchy.HalfModulusValue
+#print axioms TratadoAnalisis.Cauchy.ConvergentIsCauchy.halfModulusValue_exists_unique
+#print axioms TratadoAnalisis.Cauchy.ConvergentIsCauchy.cauchyModulusOfConvergence
+#print axioms TratadoAnalisis.Cauchy.ConvergentIsCauchy.cauchyModulusOfConvergence_mem
+#print axioms TratadoAnalisis.Cauchy.ConvergentIsCauchy.cauchyModulusOfConvergence_value_iff
+#print axioms TratadoAnalisis.Cauchy.ConvergentIsCauchy.TA_THM_00059_induced_cauchy_modulus
