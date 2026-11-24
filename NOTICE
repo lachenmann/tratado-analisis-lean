@@ -1,0 +1,7 @@
+Tratado moderno de Análisis — Formalización en Lean
+Proyecto Matemática Abierta
+Autor: Gustav A. Tacheck
+
+El proyecto utiliza Lean y Mathlib, así como las dependencias declaradas en
+lake-manifest.json. Los respectivos derechos, avisos y licencias de terceros
+no se modifican. Véase docs/DEPENDENCIAS.md.

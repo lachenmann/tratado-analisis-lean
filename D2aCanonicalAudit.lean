@@ -1,0 +1,8 @@
+import TratadoAnalisis.Rationals.OrderDefinition
+
+#print axioms TratadoAnalisis.Rationals.OrderDefinition.RatLEWitness
+#print axioms TratadoAnalisis.Rationals.OrderDefinition.ratOrderRel
+#print axioms TratadoAnalisis.Rationals.OrderDefinition.RatLE
+#print axioms TratadoAnalisis.Rationals.OrderDefinition.mem_ratOrderRel_iff
+#print axioms TratadoAnalisis.Rationals.OrderDefinition.RatLE_iff_witness
+#print axioms TratadoAnalisis.Rationals.OrderDefinition.TA_PRO_00064_ratLE_classes_iff

@@ -1,0 +1,3 @@
+import TratadoAnalisis.Rationals.OrderWellDefined
+
+#print axioms TratadoAnalisis.Rationals.OrderWellDefined.TA_LEM_00014_cross_comparison_well_defined

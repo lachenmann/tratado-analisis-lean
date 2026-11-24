@@ -1,0 +1,10 @@
+import TratadoAnalisis.Rationals.IrrationalityPrep
+
+#print axioms TratadoAnalisis.Rationals.IrrationalityPrep.EvenTA
+#print axioms TratadoAnalisis.Rationals.IrrationalityPrep.OddTA
+#print axioms TratadoAnalisis.Rationals.IrrationalityPrep.EvenOmegaTA
+#print axioms TratadoAnalisis.Rationals.IrrationalityPrep.OddOmegaTA
+#print axioms TratadoAnalisis.Rationals.IrrationalityPrep.evenOmegaTA_natEncode_iff
+#print axioms TratadoAnalisis.Rationals.IrrationalityPrep.oddOmegaTA_natEncode_iff
+#print axioms TratadoAnalisis.Rationals.IrrationalityPrep.TA_LEM_00016_parity_dichotomy
+#print axioms TratadoAnalisis.Rationals.IrrationalityPrep.TA_LEM_00017_even_square_implies_even

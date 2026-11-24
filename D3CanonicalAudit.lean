@@ -1,0 +1,9 @@
+import TratadoAnalisis.Rationals.NoZeroDivisors
+import TratadoAnalisis.Rationals.StrictOrder
+
+#print axioms TratadoAnalisis.Rationals.NoZeroDivisors.TA_COR_00007_no_zero_divisors
+#print axioms TratadoAnalisis.Rationals.StrictOrder.ratZero_lt_one
+#print axioms TratadoAnalisis.Rationals.StrictOrder.ratPositive_mul
+#print axioms TratadoAnalisis.Rationals.StrictOrder.ratInv_positive
+#print axioms TratadoAnalisis.Rationals.StrictOrder.ratLT_mul_positive_right
+#print axioms TratadoAnalisis.Rationals.StrictOrder.TA_LEM_00015_positivity_strict_scaling

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Si utiliza este código, cite el proyecto y la versión consultada."
+title: "Tratado moderno de Análisis — Formalización en Lean"
+authors:
+  - family-names: Tacheck
+    given-names: Gustav A.
+version: 0.1.0
+repository-code: https://github.com/lachenmann/tratado-analisis-lean
+url: https://matematicaabierta.cl/libros/otros/tratado-de-analisis.html
+license: Apache-2.0

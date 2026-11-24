@@ -1,0 +1,6 @@
+import TratadoAnalisis.Rationals.OrderedFieldCompatibility
+
+#print axioms TratadoAnalisis.Rationals.OrderedFieldCompatibility.ratLE_add_compat
+#print axioms TratadoAnalisis.Rationals.OrderedFieldCompatibility.ratLE_mul_nonnegative_compat
+#print axioms TratadoAnalisis.Rationals.OrderedFieldCompatibility.TA_PRO_00065_order_compatibility
+#print axioms TratadoAnalisis.Rationals.OrderedFieldCompatibility.TA_PRO_00066_ratEmbed_order_iff

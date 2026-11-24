@@ -1,0 +1,13 @@
+.lake/
+.lean/
+.verification/
+__pycache__/
+*.olean
+*.ilean
+*.trace
+*.log
+*.zip
+.env
+.env.*
+.DS_Store
+Thumbs.db

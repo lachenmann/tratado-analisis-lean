@@ -1,0 +1,4 @@
+import TratadoAnalisis.Rationals.SquareMonotonicity
+
+#print axioms TratadoAnalisis.Rationals.SquareMonotonicity.ratLT_of_le_of_lt_local
+#print axioms TratadoAnalisis.Rationals.SquareMonotonicity.TA_LEM_00018_square_strict_mono_nonnegative

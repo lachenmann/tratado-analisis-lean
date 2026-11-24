@@ -1,0 +1,2 @@
+# Preserve the certified source bytes, including historical CRLF endings.
+* -text
