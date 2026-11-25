@@ -1,6 +1,8 @@
 # TA-LEAN-0011 — Sucesiones racionales y aproximación
 
-Corte C08/R03, certificado localmente el 24-11-2026: 28 nodos del capítulo 8 y TA-PRO-00014, 185 archivos, 1230 consultas (278 nuevas respecto de v0.1.2), 920 trabajos y 156 relecturas directas con caché. Lean 4.32.1 / Mathlib v4.32.1. Cero nuevas dependencias de Choice y cero sorryAx; 65 huellas históricas con Choice. La CI externa sigue pendiente hasta su ejecución.
+Corte C08/R03, certificado localmente el 24-11-2026: 28 nodos del capítulo 8 y TA-PRO-00014, 185 archivos, 1230 consultas (278 nuevas respecto de v0.1.2), 920 trabajos y 156 relecturas directas con caché. Lean 4.32.1 / Mathlib v4.32.1. Cero nuevas dependencias de Choice y cero sorryAx; 65 huellas históricas con Choice. La CI externa concluyó satisfactoriamente: [CI #18 del PR](https://github.com/lachenmann/tratado-analisis-lean/actions/runs/45501985381) y [CI #19 de main](https://github.com/lachenmann/tratado-analisis-lean/actions/runs/45512352728), ambas con 920 trabajos, 185/185 fuentes/configuraciones, 1230/1230 huellas exactas, 17 grupos, 8 comprobaciones estrictas y 52 módulos independientes. El commit `ada56f69a0b375b484193aaa912c93548067994e` y el árbol `bf977c3d826e15c2949555e6c2ca8edd3a0e26d9` identifican la [release estable v0.2.0](https://github.com/lachenmann/tratado-analisis-lean/releases/tag/v0.2.0). La campaña local de 156 relecturas no se confunde con las comprobaciones de CI.
+
+Recuento editorial: 27 resultados numerados del capítulo, una entrada de notación (TA-NOT-00019) y TA-PRO-00014 como dependencia fundacional; 29 nodos en total.
 
 | Nodo | Módulo | Declaraciones | Alcance |
 |---|---|---|---|

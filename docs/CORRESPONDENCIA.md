@@ -1,6 +1,6 @@
-# Correspondencia vigente v0.2.0 (candidato)
+# Correspondencia vigente v0.2.0 — certificada
 
-Véase [C08](TA-LEAN-0011-C08.md). A continuación, correspondencia histórica.
+Véase [C08](TA-LEAN-0011-C08.md) y la [CI #19 de main](https://github.com/lachenmann/tratado-analisis-lean/actions/runs/45512352728), PASS. Se distinguen 27 resultados numerados del capítulo 8, TA-NOT-00019 y TA-PRO-00014. A continuación, correspondencia histórica.
 
 # Correspondencia editorial — TA-LEAN-0010
 

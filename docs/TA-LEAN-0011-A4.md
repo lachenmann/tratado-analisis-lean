@@ -11,4 +11,8 @@ Fuente: capítulo 8 v1.1.0, §§8.3.1–8.3.5. Candidato de cinco nodos:
 
 Decisiones de implementación: la totalidad y minimalidad naturales se transportan mediante códigos Nat locales para conservar la independencia de los módulos abstractos posteriores a Q. La prueba de mínimo requiere em como argumento explícito; no hay función global de selección de índices, ni se afirma computabilidad del módulo mínimo. La unicidad del límite no necesita em; la tricotomía proposicional certificada no se presenta como un decisor global de ZFSet. Se reutiliza la distancia racional de A3 y la división racional preexistente.
 
-39 declaraciones auditadas, además de 1074 huellas históricas. Se conserva cada fuente Lean anterior, y se amplía el control de importaciones locales. Candidato pendiente de CI. La construcción del cociente se reserva a capítulos posteriores. Registro canónico de la bóveda pendiente de actualización.
+39 declaraciones auditadas, además de 1074 huellas históricas. Se conserva cada fuente Lean anterior, y se amplía el control de importaciones locales. Estado histórico del candidato original: pendiente de CI. La construcción del cociente se reserva al capítulo 9.
+
+## Cierre de A4-R1
+
+El candidato original falló en [CI #17](https://github.com/lachenmann/tratado-analisis-lean/actions/runs/45454761416), por una línea redundante (`exact Nat.le_refl k` después de `rw [he]`). A4-R1 elimina sólo esa línea, sin modificar enunciados ni hipótesis. Certificación local: 913 trabajos, 1113 huellas (39 nuevas exactas con `propext, Quot.sound`), 171 fuentes/configuraciones. La bóveda quedó conciliada en R02 y el corte C08 final se certificó en [CI #18](https://github.com/lachenmann/tratado-analisis-lean/actions/runs/45501985381) y [CI #19](https://github.com/lachenmann/tratado-analisis-lean/actions/runs/45512352728). Véase [C08](TA-LEAN-0011-C08.md).
