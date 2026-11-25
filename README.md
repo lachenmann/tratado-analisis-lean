@@ -8,7 +8,7 @@ Este proyecto formaliza resultados del *Tratado moderno de Análisis* en Lean 4.
 
 ## Sucesiones racionales y aproximación — v0.2.0
 
-Candidato del corte TA-LEAN-0011 C08/R03: 185 archivos fuente/configuración y 1230 consultas axiomáticas (278 adicionales). 28 nodos del capítulo 8 y TA-PRO-00014. Certificación local: 920 trabajos y 156 relecturas; cero nuevas dependencias de Choice y cero sorryAx. La comprobación externa se consulta en CI. No se afirma la construcción del cuerpo de Cauchy ni la certificación algorítmica global.
+Corte TA-LEAN-0011 C08/R03, cerrado y publicado en [v0.2.0](https://github.com/lachenmann/tratado-analisis-lean/releases/tag/v0.2.0): 185 archivos fuente/configuración y 1230 consultas axiomáticas (278 adicionales). 27 resultados numerados del capítulo 8, la entrada de notación TA-NOT-00019 y el prerrequisito TA-PRO-00014 (29 nodos editoriales en total). Certificación local: 920 trabajos y 156 relecturas; cero nuevas dependencias de Choice y cero sorryAx. Verificación externa: [CI del PR #3, n.º 18](https://github.com/lachenmann/tratado-analisis-lean/actions/runs/45501985381) y [CI de main, n.º 19](https://github.com/lachenmann/tratado-analisis-lean/actions/runs/45512352728), ambas PASS (920 trabajos, 185/185 fuentes/configuraciones, 1230/1230 huellas exactas y 8 comprobaciones estrictas). Commit de la release: `ada56f69a0b375b484193aaa912c93548067994e`. No se afirma la construcción del cuerpo de Cauchy ni la certificación algorítmica global.
 
 - [Alcance y correspondencia C08](docs/TA-LEAN-0011-C08.md)
 - [Certificado v0.2.0](certificates/v0.2.0/README.md)
@@ -19,7 +19,16 @@ lake build
 python3 scripts/check_release_v020.py
 ```
 
-Se preservan todos los archivos certificados, incluido `lakefile.toml` (versión interna 0.1.2) y el agregador histórico. Importar directamente `TratadoAnalisis.Cauchy.SequentialIncompleteness` u otros módulos. Las secciones siguientes conservan el historial de versiones anteriores.
+Se preservan todos los archivos certificados, incluido `lakefile.toml` (versión interna 0.1.2) y el agregador histórico. El número de release y `CITATION.cff` no requieren alterar la configuración de Lake: su contenido está fijado en los manifiestos históricos y la auditoría acumulativa exige su identidad byte a byte. Importar directamente `TratadoAnalisis.Cauchy.SequentialIncompleteness` u otros módulos. Las secciones siguientes conservan el historial de versiones anteriores.
+
+## Hoja de ruta
+
+| Versión | Alcance | Estado |
+|---|---|---|
+| v0.2.0 | Capítulo 8 — Sucesiones racionales y aproximación | Publicada; núcleo conjuntista certificado |
+| v0.3.0 | Capítulo 9 — El cuerpo de Cauchy | Objetivo previsto; pendiente de formalización y certificación |
+
+La efectividad de la bisección y la computabilidad de los módulos de convergencia y Cauchy quedan como tareas diferenciadas. La completitud del nuevo cuerpo y los isomorfismos de completaciones no se anticipan en la certificación del capítulo 9.
 
 ## Prerrequisitos de Cauchy: v0.1.2
 
@@ -33,7 +42,7 @@ Se incorporan 18 nodos editoriales (aritmética y orden natural, incompletitud d
 | Dependencias de Classical.choice históricas | 65 |
 | Dependencias de sorryAx | 0 |
 
-Los cuatro bloques matemáticos han superado sus CI. La certificación de la integración se consulta en GitHub Actions. Véanse [certificado](certificates/v0.1.2/README.md), [correspondencia](docs/CORRESPONDENCIA.md) y [alcance](docs/ALCANCE.md). La construcción de Cauchy queda para v0.2.0.
+Los cuatro bloques matemáticos han superado sus CI. La certificación de la integración se consulta en GitHub Actions. Véanse [certificado](certificates/v0.1.2/README.md), [correspondencia](docs/CORRESPONDENCIA.md) y [alcance](docs/ALCANCE.md). El núcleo de sucesiones racionales se incorporó en v0.2.0; el cuerpo de Cauchy corresponde al capítulo 9.
 
 Para reproducir desde la revisión de v0.1.2:
 
